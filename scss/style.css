@@ -1,0 +1,197 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gwendolyn", cursive;
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container h1 {
+  color: #f9efff;
+}
+header .container .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+header .container .logo img {
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+header .container ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+header .container ul li {
+  margin-right: 24px;
+}
+header .container ul li a {
+  color: #09777d;
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+
+.banner {
+  font-size: 24px;
+}
+.banner .container {
+  margin-top: 180px;
+}
+.banner .container .banner-img {
+  width: 40%;
+  margin-right: 30px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(to top left, #a18cd1, #fff8fd);
+  margin-bottom: 46px;
+  position: relative;
+}
+.banner .container .banner-img .avatar {
+  position: absolute;
+  top: 13%;
+  left: 19%;
+}
+.banner .container .email {
+  background-color: #f9efff;
+  padding: 16px 36px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.banner .container .email:hover {
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.3);
+}
+.banner .container .email a {
+  text-decoration: none;
+  color: #a18cd1;
+}
+.banner .container .accordion {
+  width: 70%;
+}
+
+@media (max-width: 992px) {
+  .banner .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 992px) {
+  .email {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 992px) {
+  .banner .container .accordion {
+    width: 100%;
+  }
+}
+/* Hide the accordion content by default */
+.accordion-content {
+  display: none;
+}
+.accordion-content p {
+  text-indent: 2rem;
+}
+
+/* Add the open class to show the content when the button is clicked */
+.accordion-item.open .accordion-content {
+  display: block;
+  padding: 16px 64px;
+}
+
+/* Style the accordion header */
+.accordion-header {
+  background-color: #fff8fd;
+  border: none;
+  padding: 16px 64px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+.accordion-header::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+}
+
+/* Style the active accordion header */
+.accordion-item.open .accordion-header {
+  background-color: #a18cd1;
+  padding: 16px 64px;
+}
+.accordion-item.open .accordion-header::before {
+  content: "-";
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 40vh;
+  justify-content: space-evenly;
+  background-color: #ede6ff;
+  padding: 80px;
+  margin-top: 50px;
+}
+footer h3 {
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+footer .project {
+  text-align: center;
+}
+footer .project li {
+  list-style: none;
+  margin-bottom: 24px;
+}
+footer .project li a {
+  text-decoration: none;
+  color: #723bf2;
+  font-size: 24px;
+  padding: 16px;
+}
+footer .project li a:hover {
+  border: 1px solid #723bf2;
+  border-radius: 16px;
+}
+
+@media (max-width: 500px) {
+  footer h2 {
+    font-size: 20px;
+  }
+  footer .project li a {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=style.css.map */
